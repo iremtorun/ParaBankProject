@@ -31,7 +31,6 @@ public class _01_Register {
     public void userFillsTheNecessaryData(DataTable dt) {
 
         List<List<String>> items = dt.asLists(String.class);
-
         for (int i = 0; i < items.size(); i++) {
             WebElement e = dc.getElement(items.get(i).get(0));
             dc.mySendKeys(e, items.get(i).get(1));
