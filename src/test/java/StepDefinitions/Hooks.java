@@ -1,6 +1,5 @@
 package StepDefinitions;
 
-import Utilities.ExcelUtility;
 import Utilities.GWD;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -16,8 +15,7 @@ public class Hooks {
 
     @After
     public void after(Scenario senaryo) {
-        ExcelUtility.writeToExcel("",
-                senaryo);
+
 
         if (senaryo.isFailed()) {
             TakesScreenshot ts = ((TakesScreenshot) GWD.getDriver());
