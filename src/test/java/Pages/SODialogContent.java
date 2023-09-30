@@ -51,6 +51,45 @@ public class SODialogContent extends Parent {
     @FindBy(css = "div[id='rightPanel'] > p")
     public WebElement successMessage;
 
+    @FindBy(linkText = "Request Loan")
+    public WebElement requestLoanButton;
+
+    @FindBy(id = "amount")
+    public WebElement loanAmount;
+
+    @FindBy(id = "downPayment")
+    public WebElement downPayment;
+
+    @FindBy(id = "fromAccountId")
+    public WebElement fromAccountId;
+
+    @FindBy(css = "input[value='Apply Now']")
+    public WebElement applyNowButton;
+
+    @FindBy(id = "loanProviderName")
+    public WebElement loanProviderName;
+
+    @FindBy(id = "loanStatus")
+    public WebElement loanStatus;
+
+    @FindBy(css = "div[class='ng-scope'] > p")
+    public WebElement approvedMessage;
+
+    @FindBy(id = "newAccountId")
+    public WebElement newAccountId;
+
+    @FindBy(id = "accountType")
+    public WebElement accountType;
+
+    @FindBy(id = "balance")
+    public WebElement balance;
+
+    @FindBy(id = "availableBalance")
+    public WebElement availableBalance;
+
+    @FindBy(css = "p[class='ng-scope'] > b")
+    public WebElement transactionMessage;
+
     public WebElement getElement(String element) {
 
         switch (element) {
