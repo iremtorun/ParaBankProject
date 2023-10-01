@@ -27,8 +27,8 @@ public class _07_Contact_Regression {
     }
 
     @Then("Checking the entered information")
-    public void checkingTheEnteredInformation() throws InterruptedException {
-        Thread.sleep(2000);
+    public void checkingTheEnteredInformation()   {
+        dc.wait.until(ExpectedConditions.attributeToBe(dc.customername,"value","hamza"));
         cname = dc.customername.getAttribute("value");
         Assert.assertEquals(cname, "hamza");
 
