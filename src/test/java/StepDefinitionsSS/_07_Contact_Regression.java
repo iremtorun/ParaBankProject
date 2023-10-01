@@ -11,7 +11,7 @@ import org.testng.Assert;
 
 public class _07_Contact_Regression {
     DialogContentSS dc = new DialogContentSS();
-
+    String cname;
 
     @When("Should be click update button")
     public void shouldBeClikUpdateButton() {
@@ -27,29 +27,31 @@ public class _07_Contact_Regression {
     }
 
     @Then("Checking the entered information")
-    public void checkingTheEnteredInformation() {
-        Assert.assertTrue(GWD.getDriver().getCurrentUrl().contains
-                ("https://parabank.parasoft.com/parabank/updateprofile.htm"));
+    public void checkingTheEnteredInformation() throws InterruptedException {
+        Thread.sleep(2000);
+        cname = dc.customername.getAttribute("value");
+        Assert.assertEquals(cname, "hamza");
+
 
     }
 
     @Then("Clear firstname,lastName,city")
     public void clearFirstnameLastNameCity() {
         dc.wait.until(ExpectedConditions.visibilityOf(dc.customername));
-        dc.mySendKeys(dc.customername,"     ");
+        dc.mySendKeys(dc.customername, "     ");
 
         dc.wait.until(ExpectedConditions.visibilityOf(dc.customerlastname));
-        dc.mySendKeys(dc.customerlastname,"     ");
+        dc.mySendKeys(dc.customerlastname, "     ");
 
         dc.wait.until(ExpectedConditions.visibilityOf(dc.customercity));
-        dc.mySendKeys(dc.customercity,"     ");
+        dc.mySendKeys(dc.customercity, "     ");
 
-        dc.mySendKeys(dc.customeraddress,"hjhsjs");
-        dc.mySendKeys(dc.customerstate,"hısısj");
-        dc.mySendKeys(dc.customerphone,"321254154");
-        dc.mySendKeys(dc.customerzipcode,"5874587");
-
+        dc.mySendKeys(dc.customeraddress, "hjhsjs");
+        dc.mySendKeys(dc.customerstate, "hısısj");
+        dc.mySendKeys(dc.customerphone, "321254154");
+        dc.mySendKeys(dc.customerzipcode, "5874587");
     }
+
     @Then("Should be see errormessage")
     public void shouldBeSeeErrormessage() {
         Assert.assertTrue(dc.errormessage.getText().contains("required"));
