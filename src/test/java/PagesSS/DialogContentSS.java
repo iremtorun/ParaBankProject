@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DialogContentSS extends ParentSS {
     public DialogContentSS() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -59,6 +61,33 @@ public class DialogContentSS extends ParentSS {
     public WebElement pricegas;
     @FindBy(xpath = "(//a[@class='ng-binding'])[3]")
     public WebElement pricegasbill;
+    @FindBy(linkText ="Update Contact Info")
+    public WebElement uptadecontact;
+    @FindBy(id = "customer.firstName")
+    public WebElement customername;
+    @FindBy(name = "customer.lastName")
+    public WebElement customerlastname;
+    @FindBy(name = "customer.address.street")
+    public WebElement customeraddress;
+
+    @FindBy(name = "customer.address.city")
+    public WebElement customercity;
+    @FindBy(name = "customer.address.state")
+    public WebElement customerstate;
+    @FindBy(name = "customer.address.zipCode")
+    public WebElement customerzipcode;
+    @FindBy(name = "customer.phoneNumber")
+    public WebElement customerphone;
+    @FindBy(css = "[value='Update Profile']")
+    public WebElement updatebutton;
+    @FindBy(css = "div h1")
+    public WebElement updatemessage;
+    @FindBy(linkText ="Log Out")
+    public WebElement logout;
+    @FindBy(xpath = "//span[@class='error ng-scope' and text()='First name is required.']")
+    public WebElement errormessage;
+
+
 
     public WebElement getWebElement(String strElement) {
         switch (strElement) {
@@ -82,6 +111,15 @@ public class DialogContentSS extends ParentSS {
             case "accountacc":return accountacc;
             case "electricitybill":return electricitybill;
             case "pricegasbill":return pricegasbill;
+            case "customername":return customername;
+            case "customerlastname":return customerlastname;
+            case "customeraddress":return customeraddress;
+            case "customercity":return customercity;
+            case "customerstate":return customerstate;
+            case "customerzipcode":return customerzipcode;
+            case "customerphone":return customerphone;
+            case "updatebutton":return updatebutton;
+            case "logout":return logout;
         }
         return null;
     }
