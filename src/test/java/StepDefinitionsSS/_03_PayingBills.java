@@ -25,7 +25,7 @@ public class _03_PayingBills {
 
     @Given("Navigate to site")
     public void navigateToSite() {
-        GWD.getDriver().get("https://para.testar.org/parabank/index.htm?ConnType=JDBC");
+        GWD.getDriver().get("https://parabank.parasoft.com/");
     }
 
     @When("SendKeys")

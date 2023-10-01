@@ -1,78 +1,34 @@
 Feature: Paying Bills
 
-  Scenario: Electricity Bill
+  Scenario Outline: Paying a Bill
     Given Navigate to site
-    When  SendKeys
-      | username | kalem |
+    When SendKeys
+      | username | masal |
       | password | 12345 |
     Then Click
       | LogInButton |
     And Click
       | billpaybutton |
     Then SendKeys
-      | payeename | EnerjiSA Elektrik Faturasi |
-      | address   | Turkiye                    |
-      | city      | Izmir                      |
-      | state     | Izmir                      |
-      | zipcode   | 35000                      |
-      | phone     | 5555555555                 |
-      | account   | 118128                     |
-      | verifyacc | 118128                     |
-      | amount    | 85                         |
+      | payeename | <payeename> |
+      | address   | <address>   |
+      | city      | <city>      |
+      | state     | <state>     |
+      | zipcode   | <zipcode>   |
+      | phone     | <phone>     |
+      | account   | <account>   |
+      | verifyacc | <verifyacc> |
+      | amount    | <amount>    |
 
     And Click
       | sendpayment |
     Then Confrim order message
-
     And Click Accountoverview
-
     Then Click Accountacc
+    And Price Comparison <billtype> Bill
 
-
-    Then Price Comparison Electricity Bill
-
-  Scenario: Water Bill
-    And Click
-      | billpaybutton |
-
-    Then SendKeys
-      | payeename | Su Faturasi Odeme |
-      | address   | Turkiye           |
-      | city      | Izmir             |
-      | state     | Izmir             |
-      | zipcode   | 35000             |
-      | phone     | 5555555555        |
-      | account   | 118128            |
-      | verifyacc | 118128            |
-      | amount    | 45                |
-    And Click
-      | sendpayment |
-    Then Confrim order message
-    And Click Accountoverview
-    Then Click
-      | accountacc |
-
-    Then Price Comparison Water Bill
-
-
-  Scenario: Natural Gas bill
-    And Click
-      | billpaybutton |
-
-    Then SendKeys
-      | payeename | Dogalgaz Faturasi Odeme |
-      | address   | Turkiye                 |
-      | city      | Izmir                   |
-      | state     | Izmir                   |
-      | zipcode   | 35000                   |
-      | phone     | 5555555555              |
-      | account   | 118128                  |
-      | verifyacc | 118128                  |
-      | amount    | 120                     |
-    And Click
-      | sendpayment |
-    Then Confrim order message
-    And Click Accountoverview
-    Then Click
-      | accountacc |
-    Then Price Comparison Natural Gas Bill
+    Examples:
+      | payeename                  | address | city  | state | zipcode | phone      | account | verifyacc | amount | billtype    |
+      | EnerjiSA Elektrik Faturasi | Turkiye | Izmir | Izmir | 35000   | 5555555555 | 118128  | 118128    | 85     | Electricity |
+      | Su Faturasi Odeme          | Turkiye | Izmir | Izmir | 35000   | 5555555555 | 118128  | 118128    | 45     | Water       |
+      | Dogalgaz Faturasi Odeme    | Turkiye | Izmir | Izmir | 35000   | 5555555555 | 118128  | 118128    | 120    | Natural Gas |
