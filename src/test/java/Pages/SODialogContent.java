@@ -90,6 +90,42 @@ public class SODialogContent extends Parent {
     @FindBy(css = "p[class='ng-scope'] > b")
     public WebElement transactionMessage;
 
+    @FindBy(css = "span[id='customer.username.errors']")
+    public WebElement existsMessage;
+
+    @FindBy(css = "span[id='repeatedPassword.errors']")
+    public WebElement passwordMatchMessage;
+
+    @FindBy(linkText = "Forgot login info?")
+    public WebElement forgotLoginButton;
+
+    @FindBy(id = "firstName")
+    public WebElement forgotName;
+
+    @FindBy(id = "lastName")
+    public WebElement forgotLastName;
+
+    @FindBy(id = "address.street")
+    public WebElement forgotAddress;
+
+    @FindBy(id = "address.city")
+    public WebElement forgotCity;
+
+    @FindBy(id = "address.state")
+    public WebElement forgotState;
+
+    @FindBy(id = "address.zipCode")
+    public WebElement forgotZipCode;
+
+    @FindBy(id = "ssn")
+    public WebElement forgotSsn;
+
+    @FindBy(css = "input[value='Find My Login Info']")
+    public WebElement findMyInfoButton;
+
+    @FindBy(css = "div[id='rightPanel'] > p")
+    public WebElement loggedInMessage;
+
     public WebElement getElement(String element) {
 
         switch (element) {
@@ -105,6 +141,13 @@ public class SODialogContent extends Parent {
             case "userName": return this.userName;
             case "password": return this.password;
             case "passwordConfirm": return this.passwordConfirm;
+            case "forgotName": return this.forgotName;
+            case "forgotLastName": return this.forgotLastName;
+            case "forgotAddress": return this.forgotAddress;
+            case "forgotCity": return this.forgotCity;
+            case "forgotState": return this.forgotState;
+            case "forgotZipCode": return this.forgotZipCode;
+            case "forgotSsn": return this.forgotSsn;
         }
         return null;
     }

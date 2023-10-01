@@ -9,11 +9,12 @@ Feature: Register
       | address         | Godfather's Mansion |
       | city            | Little Italy        |
       | state           | New York            |
-      | zipCode         | 001234577           |
-      | phoneNumber     | 005511255           |
-      | ssn             | 535270359722        |
-      | userName        | michaelTheCorleone  |
+      | zipCode         | 00123               |
+      | phoneNumber     | 001212              |
+      | ssn             | 009988              |
+      | userName        | michaelTheCorleone9 |
       | password        | 12340               |
       | passwordConfirm | 12340               |
 
     Then Successful message is displayed
+    
