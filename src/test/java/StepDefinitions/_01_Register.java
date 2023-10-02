@@ -45,3 +45,4 @@ public class _01_Register {
         dc.verifyContainsText(dc.successMessage, "success");
     }
 }
+
