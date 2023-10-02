@@ -16,6 +16,6 @@ public class _11_NegativeRegister {
     @Then("Password did not match message is displayed")
     public void passwordDidNotMatchMessageIsDisplayed() {
 
-        dc.verifyContainsText(dc.passwordMatchMessage, " not match");
+        dc.verifyContainsText(dc.passwordMatchMessage, "not match");
     }
 }
