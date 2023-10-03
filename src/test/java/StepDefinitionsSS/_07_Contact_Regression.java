@@ -15,46 +15,46 @@ public class _07_Contact_Regression {
 
     @When("Should be click update button")
     public void shouldBeClikUpdateButton() {
-        dc.myClick(dc.uptadecontact);
+        dc.myClick(dc.uptadeContact);
     }
 
 
     @Then("Should be see uptade message")
     public void shouldBeSeeUptadeMessage() {
 
-        dc.verifyContainsText(dc.updatemessage, "Updated");
+        dc.verifyContainsText(dc.updateMessage, "Updated");
 
     }
 
     @Then("Checking the entered information")
     public void checkingTheEnteredInformation()   {
-        dc.wait.until(ExpectedConditions.attributeToBe(dc.customername,"value","hamza"));
-        cname = dc.customername.getAttribute("value");
-        Assert.assertEquals(cname, "hamza");
+        dc.wait.until(ExpectedConditions.attributeToBe(dc.customerName,"value","bursa"));
+        cname = dc.customerName.getAttribute("value");
+        Assert.assertEquals(cname, "bursa");
 
 
     }
 
     @Then("Clear firstname,lastName,city")
     public void clearFirstnameLastNameCity() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.customername));
-        dc.mySendKeys(dc.customername, "     ");
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.customerName));
+        dc.mySendKeys(dc.customerName, "     ");
 
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.customerlastname));
-        dc.mySendKeys(dc.customerlastname, "     ");
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.customerLastname));
+        dc.mySendKeys(dc.customerLastname, "     ");
 
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.customercity));
-        dc.mySendKeys(dc.customercity, "     ");
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.customerCity));
+        dc.mySendKeys(dc.customerCity, "     ");
 
-        dc.mySendKeys(dc.customeraddress, "hjhsjs");
-        dc.mySendKeys(dc.customerstate, "hısısj");
-        dc.mySendKeys(dc.customerphone, "321254154");
-        dc.mySendKeys(dc.customerzipcode, "5874587");
+        dc.mySendKeys(dc.customerAddress, "hjhsjs");
+        dc.mySendKeys(dc.customerState, "hısısj");
+        dc.mySendKeys(dc.customerPhone, "321254154");
+        dc.mySendKeys(dc.customerZipcode, "5874587");
     }
 
     @Then("Should be see errormessage")
     public void shouldBeSeeErrormessage() {
-        Assert.assertTrue(dc.errormessage.getText().contains("required"));
+        Assert.assertTrue(dc.errorMessage.getText().contains("required"));
 
     }
 

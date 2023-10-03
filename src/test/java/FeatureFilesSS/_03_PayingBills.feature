@@ -3,25 +3,25 @@ Feature: Paying Bills
   Scenario Outline: Paying a Bill
     Given Navigate to site
     When SendKeys
-      | username | masal |
-      | password | 12345 |
+      | username | hayal |
+      | password | 1234  |
     Then Click
-      | LogInButton |
+      | logInButton |
     And Click
-      | billpaybutton |
+      | billPayButton |
     Then SendKeys
-      | payeename | <payeename> |
+      | payeeName | <payeename> |
       | address   | <address>   |
       | city      | <city>      |
       | state     | <state>     |
       | zipcode   | <zipcode>   |
       | phone     | <phone>     |
       | account   | <account>   |
-      | verifyacc | <verifyacc> |
+      | verifyAcc | <verifyacc> |
       | amount    | <amount>    |
 
     And Click
-      | sendpayment |
+      | sendPayment |
     Then Confrim order message
     And Click Accountoverview
     Then Click Accountacc

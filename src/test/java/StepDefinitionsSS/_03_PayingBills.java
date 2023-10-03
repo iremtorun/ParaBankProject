@@ -52,26 +52,26 @@ public class _03_PayingBills {
     @Then("Confrim order message")
     public void confrimOrderMessage() {
         dc.verifyContainsText(dc.confrim, "Complete");
-        amountStr = dc.amountprice.getText();
+        amountStr = dc.amountPrice.getText();
 
     }
 
     @And("Click Accountoverview")
     public void clickAccountoverview() {
-        dc.myClick(dc.accountoverview);
+        dc.myClick(dc.accountOverview);
     }
 
     @Then("Click Accountacc")
     public void clickAccountacc() {
-        dc.myClick(dc.accountacc);
+        dc.myClick(dc.accountAcc);
 
     }
 
     @Then("Price Comparison Electricity Bill")
     public void priceComparison() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.priceelectricity));
-        electricitybillStr = dc.electricitybill.getText();
-        priceStr = dc.priceelectricity.getText();
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.priceElectriCity));
+        electricitybillStr = dc.electricityBill.getText();
+        priceStr = dc.priceElectriCity.getText();
 
         Assert.assertTrue(electricitybillStr.contains("EnerjiSA"));
         Assert.assertEquals(amountStr, priceStr);
@@ -80,9 +80,9 @@ public class _03_PayingBills {
 
     @Then("Price Comparison Water Bill")
     public void priceComparisonWaterbill() {
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.pricewaterbill));
-        waterbillStr=dc.waterbill.getText();
-        pricewaterbill=dc.pricewaterbill.getText();
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.priceWaterBill));
+        waterbillStr=dc.waterBill.getText();
+        pricewaterbill=dc.priceWaterBill.getText();
 
         Assert.assertTrue(waterbillStr.contains("Su Faturasi"));
         Assert.assertEquals(amountStr,pricewaterbill);
@@ -93,9 +93,9 @@ public class _03_PayingBills {
     @Then("Price Comparison Natural Gas Bill")
     public void priceComparisonNaturalGasbill() {
 
-        dc.wait.until(ExpectedConditions.visibilityOf(dc.pricegasbill));
-        pricegasbillStr=dc.pricegasbill.getText();
-        pricegasStr=dc.pricegas.getText();
+        dc.wait.until(ExpectedConditions.visibilityOf(dc.priceGasBill));
+        pricegasbillStr=dc.priceGasBill.getText();
+        pricegasStr=dc.priceGas.getText();
 
         Assert.assertTrue(pricegasbillStr.contains("Dogalgaz"));
         Assert.assertEquals(amountStr,pricegasStr);
