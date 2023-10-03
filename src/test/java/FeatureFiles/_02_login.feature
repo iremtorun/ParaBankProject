@@ -4,4 +4,5 @@ Feature: Login
 
       Given Navigate to Para Bank
       When Enter username and password and click login button
-      Then User should login succesfully
+      And User should login succesfully
+      Then User should Log out succesfully
