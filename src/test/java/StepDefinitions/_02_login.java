@@ -2,9 +2,11 @@ package StepDefinitions;
 
 import Pages.aycaDialogContent;
 import Utilities.GWD;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en_scouse.An;
 
 
 public class _02_login {
@@ -24,10 +26,19 @@ public class _02_login {
         adc.myClick(adc.loginBtn);
 
     }
-    @Then("User should login succesfully")
+    @And("User should login succesfully")
     public void user_should_login_succesfully() {
-        adc.verifyContainsText(adc.txtParaBank, "Para Bank");
+    adc.verifyContainsText(adc.logOut, "Log Out");
+
 
     }
+    @Then("User should Log out succesfully")
+    public void User_should_Log_out_succesfully(){
+        adc.myClick(adc.logOut);
+        adc.verifyContainsText(adc.Register, "Register");
+
+
+    }
+
 
 }

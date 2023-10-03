@@ -19,7 +19,10 @@ public class aycaDialogContent extends Parent {
     @FindBy(css = "input[type='submit']")
     public WebElement loginBtn;
 
-    @FindBy(css="span[class='mat-mdc-tooltip-trigger logo-text']")
-    public WebElement txtParaBank;
+  @FindBy(linkText = "Log Out")
+    public WebElement logOut;
+
+  @FindBy (linkText = "Register")
+    public WebElement Register;
 
 }
