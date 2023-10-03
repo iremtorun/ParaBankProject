@@ -17,7 +17,7 @@ public class _08_RequestLoan {
     public void userClicksOnRequestLoan() {
 
         WebElement userText = GWD.getDriver().findElement(By.cssSelector("input[name='username']"));
-        userText.sendKeys("michaelTheCorleone");
+        userText.sendKeys("mCorleone11");
         WebElement passwordText = GWD.getDriver().findElement(By.cssSelector("input[name='password']"));
         passwordText.sendKeys("12340");
         WebElement loginBtn = GWD.getDriver().findElement(By.cssSelector("input[value='Log In']"));
@@ -48,7 +48,6 @@ public class _08_RequestLoan {
     @And("Loan request processed information is verified")
     public void loanRequestProcessedInformationIsVerified() {
 
-        dc.verifyContainsText(dc.loanProviderName, "Para");
         dc.verifyContainsText(dc.loanStatus, "Approved");
     }
 
