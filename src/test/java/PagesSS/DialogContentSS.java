@@ -17,11 +17,11 @@ public class DialogContentSS extends ParentSS {
     @FindBy(name = "password")
     public WebElement password;
     @FindBy(css = "[type='submit']")
-    public WebElement LogInButton;
+    public WebElement logInButton;
     @FindBy(linkText = "Bill Pay")
-    public WebElement billpaybutton;
+    public WebElement billPayButton;
     @FindBy(name = "payee.name")
-    public WebElement payeename;
+    public WebElement payeeName;
     @FindBy(name = "payee.address.street")
     public WebElement address;
     @FindBy(name = "payee.address.city")
@@ -33,59 +33,59 @@ public class DialogContentSS extends ParentSS {
     @FindBy(name = "payee.address.zipCode")
     public WebElement zipcode;
     @FindBy(name = "verifyAccount")
-    public WebElement verifyacc;
+    public WebElement verifyAcc;
     @FindBy(name = "amount")
     public WebElement amount;
     @FindBy(name = "payee.phoneNumber")
     public WebElement phone;
     @FindBy(css = "[value='Send Payment']")
-    public WebElement sendpayment;
+    public WebElement sendPayment;
     @FindBy(xpath = "//h1[@class='title' and text()='Bill Payment Complete']")
     public WebElement confrim;
 
     @FindBy(css = "[id='amount']")
-    public WebElement amountprice;
+    public WebElement amountPrice;
     @FindBy(linkText = "Accounts Overview")
-    public WebElement accountoverview;
+    public WebElement accountOverview;
     @FindBy(xpath = "//*[@ng-repeat='account in accounts']/*/*")
-    public WebElement accountacc;
+    public WebElement accountAcc;
     @FindBy(xpath = "(//*[@class='ng-binding ng-scope'])[1]")
-    public WebElement priceelectricity;
+    public WebElement priceElectriCity;
     @FindBy(xpath = "(//a[@class='ng-binding'])[1]")
-    public WebElement electricitybill;
+    public WebElement electricityBill;
     @FindBy(xpath = "(//a[@class='ng-binding'])[2]")
-    public WebElement waterbill;
+    public WebElement waterBill;
     @FindBy(xpath ="(//*[@class='ng-binding ng-scope'])[2]" )
-    public WebElement pricewaterbill;
+    public WebElement priceWaterBill;
     @FindBy(xpath = "(//*[@class='ng-binding ng-scope'])[3]")
-    public WebElement pricegas;
+    public WebElement priceGas;
     @FindBy(xpath = "(//a[@class='ng-binding'])[3]")
-    public WebElement pricegasbill;
+    public WebElement priceGasBill;
     @FindBy(linkText ="Update Contact Info")
-    public WebElement uptadecontact;
+    public WebElement uptadeContact;
     @FindBy(id = "customer.firstName")
-    public WebElement customername;
+    public WebElement customerName;
     @FindBy(name = "customer.lastName")
-    public WebElement customerlastname;
+    public WebElement customerLastname;
     @FindBy(name = "customer.address.street")
-    public WebElement customeraddress;
+    public WebElement customerAddress;
 
     @FindBy(name = "customer.address.city")
-    public WebElement customercity;
+    public WebElement customerCity;
     @FindBy(name = "customer.address.state")
-    public WebElement customerstate;
+    public WebElement customerState;
     @FindBy(name = "customer.address.zipCode")
-    public WebElement customerzipcode;
+    public WebElement customerZipcode;
     @FindBy(name = "customer.phoneNumber")
-    public WebElement customerphone;
+    public WebElement customerPhone;
     @FindBy(css = "[value='Update Profile']")
-    public WebElement updatebutton;
+    public WebElement updateButton;
     @FindBy(css = "div h1")
-    public WebElement updatemessage;
+    public WebElement updateMessage;
     @FindBy(linkText ="Log Out")
     public WebElement logout;
     @FindBy(xpath = "//span[@class='error ng-scope' and text()='First name is required.']")
-    public WebElement errormessage;
+    public WebElement errorMessage;
 
 
 
@@ -93,32 +93,32 @@ public class DialogContentSS extends ParentSS {
         switch (strElement) {
             case "username": return username;
             case "password": return password;
-            case "LogInButton": return LogInButton;
-            case "billpaybutton": return billpaybutton;
-            case "payeename": return payeename;
+            case "logInButton": return logInButton;
+            case "billPayButton": return billPayButton;
+            case "payeeName": return payeeName;
             case "address": return address;
             case "city": return city;
             case "state": return state;
             case "zipcode": return zipcode;
             case "account": return account;
-            case "verifyacc": return verifyacc;
+            case "verifyAcc": return verifyAcc;
             case "amount": return amount;
             case "phone": return phone;
-            case "sendpayment": return sendpayment;
-            case "priceelectricity": return priceelectricity;
-            case "amountprice": return amountprice;
-            case "accountoverview": return accountoverview;
-            case "accountacc":return accountacc;
-            case "electricitybill":return electricitybill;
-            case "pricegasbill":return pricegasbill;
-            case "customername":return customername;
-            case "customerlastname":return customerlastname;
-            case "customeraddress":return customeraddress;
-            case "customercity":return customercity;
-            case "customerstate":return customerstate;
-            case "customerzipcode":return customerzipcode;
-            case "customerphone":return customerphone;
-            case "updatebutton":return updatebutton;
+            case "sendPayment": return sendPayment;
+            case "priceElectriCity": return priceElectriCity;
+            case "amountPrice": return amountPrice;
+            case "accountOverview": return accountOverview;
+            case "accountAcc":return accountAcc;
+            case "electricityBill":return electricityBill;
+            case "priceGasBill":return priceGasBill;
+            case "customerName":return customerName;
+            case "customerLastname":return customerLastname;
+            case "customerAddress":return customerAddress;
+            case "customerCity":return customerCity;
+            case "customerState":return customerState;
+            case "customerZipcode":return customerZipcode;
+            case "customerPhone":return customerPhone;
+            case "updateButton":return updateButton;
             case "logout":return logout;
         }
         return null;
