@@ -14,7 +14,7 @@ Feature: Negative Register
       | zipCode         | 00123               |
       | phoneNumber     | 001212              |
       | ssn             | 009988              |
-      | userName        | michaelTheCorleone9 |
+      | userName        | mCorleone11         |
       | password        | 12340               |
       | passwordConfirm | 12340               |
 
@@ -30,8 +30,8 @@ Feature: Negative Register
       | zipCode         | 00123               |
       | phoneNumber     | 001212              |
       | ssn             | 009988              |
-      | userName        | michaelTheCorleone9 |
+      | userName        | mCorleone112        |
       | password        | 12340               |
-      | passwordConfirm | 12340               |
+      | passwordConfirm | 123401              |
 
     Then Password did not match message is displayed

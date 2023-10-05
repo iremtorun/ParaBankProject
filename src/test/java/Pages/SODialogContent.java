@@ -66,9 +66,6 @@ public class SODialogContent extends Parent {
     @FindBy(css = "input[value='Apply Now']")
     public WebElement applyNowButton;
 
-    @FindBy(id = "loanProviderName")
-    public WebElement loanProviderName;
-
     @FindBy(id = "loanStatus")
     public WebElement loanStatus;
 

@@ -12,9 +12,8 @@ Feature: Register
       | zipCode         | 00123               |
       | phoneNumber     | 001212              |
       | ssn             | 009988              |
-      | userName        | michaelTheCorleone9 |
+      | userName        | mCorleone11         |
       | password        | 12340               |
       | passwordConfirm | 12340               |
 
     Then Successful message is displayed
-    
