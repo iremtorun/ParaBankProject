@@ -1,15 +1,12 @@
-package StepDefinitionsSS;
+package StepDefinitions;
 
 import PagesSS.DialogContentSS;
-import Utilities.GWD;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-public class _07_Contact_Regression {
+public class _07_ContactRegression {
     DialogContentSS dc = new DialogContentSS();
     String cname;
 

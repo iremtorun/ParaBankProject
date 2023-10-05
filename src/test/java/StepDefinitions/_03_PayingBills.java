@@ -1,5 +1,6 @@
-package StepDefinitionsSS;
+package StepDefinitions;
 
+import Pages.DialogContent;
 import PagesSS.DialogContentSS;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
@@ -14,7 +15,7 @@ import org.testng.Assert;
 import java.util.List;
 
 public class _03_PayingBills {
-    DialogContentSS dc = new DialogContentSS();
+    DialogContent dc = new DialogContent();
     String priceStr;
     String electricitybillStr;
     String amountStr;
@@ -23,22 +24,8 @@ public class _03_PayingBills {
     String pricegasbillStr;
     String pricegasStr;
 
-    @Given("Navigate to site")
-    public void navigateToSite() {
-        GWD.getDriver().get("https://parabank.parasoft.com/");
-    }
 
-    @When("SendKeys")
-    public void sendkeys(DataTable dt) {
-        List<List<String>> items = dt.asLists(String.class);
 
-        for (int i = 0; i < items.size(); i++) {
-            WebElement SendKey = dc.getWebElement(items.get(i).get(0));
-            String Word = items.get(i).get(1);
-
-            dc.mySendKeys(SendKey, Word);
-        }
-    }
 
     @Then("Click")
     public void click(DataTable dt) {

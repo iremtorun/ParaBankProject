@@ -1,15 +1,10 @@
 package StepDefinitions;
 
-import Pages.DialogContentNurhayat1;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 public class _05_Hesapdetaylarinaerisim {
     DialogContentNurhayat1 dc = new DialogContentNurhayat1();

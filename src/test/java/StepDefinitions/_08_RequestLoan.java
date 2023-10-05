@@ -1,6 +1,5 @@
 package StepDefinitions;
 
-import Pages.SODialogContent;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;

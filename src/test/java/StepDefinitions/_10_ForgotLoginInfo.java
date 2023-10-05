@@ -1,6 +1,5 @@
 package StepDefinitions;
 
-import Pages.SODialogContent;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -9,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class _12_ForgotLoginInfo {
+public class _10_ForgotLoginInfo {
 
     SODialogContent dc = new SODialogContent();
 

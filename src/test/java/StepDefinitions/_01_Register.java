@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import Pages.SODialogContent;
+import Pages.DialogContent;
 import Utilities.GWD;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class _01_Register {
 
-    SODialogContent dc = new SODialogContent();
+    DialogContent dc = new DialogContent();
 
     @Given("Navigate to website")
     public void navigateToWebsite() {

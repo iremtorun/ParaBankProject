@@ -1,9 +1,8 @@
 package StepDefinitions;
 
-import Pages.SODialogContent;
 import io.cucumber.java.en.Then;
 
-public class _11_NegativeRegister {
+public class _09_NegativeRegister {
 
     SODialogContent dc = new SODialogContent();
 

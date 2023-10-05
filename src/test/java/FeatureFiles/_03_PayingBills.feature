@@ -1,12 +1,7 @@
 Feature: Paying Bills
 
   Scenario Outline: Paying a Bill
-    Given Navigate to site
-    When SendKeys
-      | username | hayal |
-      | password | 1234  |
-    Then Click
-      | logInButton |
+
     And Click
       | billPayButton |
     Then SendKeys
