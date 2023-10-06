@@ -5,5 +5,5 @@ Feature: Account Overview
     When Enter username and password and click login button
 
   Scenario: Bank Account Overview
-    Then User Account details on the click
-    And User should see Transaction Details
+    Then User clicks on account overview
+

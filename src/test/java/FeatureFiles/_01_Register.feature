@@ -12,7 +12,7 @@ Feature: Register
       | zipCode         | 00123               |
       | phoneNumber     | 001212              |
       | ssn             | 009988              |
-      | userName        | mCorleone00         |
+      | userName        | mCorleone002        |
       | password        | 12340               |
       | passwordConfirm | 12340               |
 

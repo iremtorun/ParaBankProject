@@ -18,7 +18,7 @@ public class _02_Login {
     @When("Enter username and password and click login button")
     public void enter_username_and_password_and_click_login_button() {
 
-        dc.mySendKeys(dc.loginUser, "mCorleone00");
+        dc.mySendKeys(dc.loginUser, "mCorleone002");
         dc.mySendKeys(dc.loginPassword, "12340");
         dc.myClick(dc.logInButton);
     }

@@ -35,11 +35,22 @@ public class DialogContent extends Parent {
     @FindBy(linkText = "Accounts Overview")
     public WebElement accountOverview;
 
-    @FindBy(css = "[href=\"activity.htm?id=13899\"]")
-    public WebElement account1;
+   @FindBy(xpath = "//tr[@class='ng-scope'] // a")
+   public WebElement account1;
 
-    @FindBy(css = "[href=\"transaction.htm?id=14587\"]")
-    public WebElement transactionBtn;
+   @FindBy(linkText = "Transfer Funds")
+   public WebElement transferFunds;
+
+   @FindBy(id = "amount")
+   public WebElement amountToTransfer;
+
+   @FindBy(css = "input[value='Transfer']")
+   public WebElement transfer;
+
+
+   @FindBy(xpath = "//h1[text()='Transfer Complete!']")
+   public WebElement transferCompleteText;
+
 
     @FindBy(linkText = "Register")
     public WebElement registerButton;
