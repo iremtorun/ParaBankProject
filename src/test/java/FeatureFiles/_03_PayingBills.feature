@@ -1,14 +1,17 @@
 Feature: Paying Bills
 
-  Scenario Outline: Paying a Bill
+  Background:
+    Given Navigate to Para Bank
+    When Enter username and password and click login button
 
+  Scenario Outline: Paying a Bill
     And Click
       | billPayButton |
     Then SendKeys
       | payeeName | <payeename> |
-      | address   | <address>   |
-      | city      | <city>      |
-      | state     | <state>     |
+      | address2  | <address>   |
+      | city2     | <city>      |
+      | state2    | <state>     |
       | zipcode   | <zipcode>   |
       | phone     | <phone>     |
       | account   | <account>   |

@@ -1,7 +1,10 @@
 Feature: Request Loan
 
+  Background:
+    Given Navigate to Para Bank
+    When Enter username and password and click login button
+
   Scenario: Apply for Loan Request
-    Given Navigate to website
     When User clicks on request loan
     Then User fills the necessary money data
     And User selects an account number

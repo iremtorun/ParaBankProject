@@ -1,12 +1,8 @@
 Feature:Contact_Regression
 
   Background:
-    Given Navigate to site
-    When  SendKeys
-      | username | tokyo |
-      | password | 1234  |
-    Then Click
-      | logInButton |
+    Given Navigate to Para Bank
+    When Enter username and password and click login button
 
   Scenario:Contact_Regression
     When Should be click update button
@@ -25,8 +21,8 @@ Feature:Contact_Regression
     And Click
       | logout |
     When SendKeys
-      | username | tokyo |
-      | password | 1234  |
+      | loginUser     | mCorleone00 |
+      | loginPassword | 12340       |
     Then Click
       | logInButton |
     When Should be click update button
@@ -41,8 +37,8 @@ Feature:Contact_Regression
     And Click
       | logout |
     When SendKeys
-      | username | tokyo |
-      | password | 1234  |
+      | loginUser     | mCorleone00 |
+      | loginPassword | 12340       |
     Then Click
       | logInButton |
     When Should be click update button

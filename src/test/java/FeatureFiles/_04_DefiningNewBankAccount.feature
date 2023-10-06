@@ -1,7 +1,8 @@
 Feature: Defining New Bank Account
 
   Background:
-    Given Navigate to website
+    Given Navigate to Para Bank
+    When Enter username and password and click login button
 
   Scenario: User Defines New Bank Account
     When User clicked on the menu to create a current or current account

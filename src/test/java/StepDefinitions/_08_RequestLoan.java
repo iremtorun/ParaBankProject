@@ -1,26 +1,18 @@
 package StepDefinitions;
 
-import Utilities.GWD;
+import Pages.DialogContent;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class _08_RequestLoan {
 
-    SODialogContent dc = new SODialogContent();
+    DialogContent dc = new DialogContent();
 
     @When("User clicks on request loan")
     public void userClicksOnRequestLoan() {
 
-        WebElement userText = GWD.getDriver().findElement(By.cssSelector("input[name='username']"));
-        userText.sendKeys("mCorleone11");
-        WebElement passwordText = GWD.getDriver().findElement(By.cssSelector("input[name='password']"));
-        passwordText.sendKeys("12340");
-        WebElement loginBtn = GWD.getDriver().findElement(By.cssSelector("input[value='Log In']"));
-        loginBtn.click();
         dc.myClick(dc.requestLoanButton);
     }
 
