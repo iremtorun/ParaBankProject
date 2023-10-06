@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-public class _07_ContactRegression {
+public class _07_ContactInfo {
 
     DialogContent dc = new DialogContent();
     String cname;
